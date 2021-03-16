@@ -21,10 +21,12 @@ export default defineComponent({
   methods: {
    async updateThePage (qpage: Number) {
      var self = this
+      //@ts-ignore
       this.$apollo.queries.characters.fetchMore({
         variables: {
           page: qpage,
         },
+        //@ts-ignore
         updateQuery: (previousResult, { fetchMoreResult }) => {
           const newChars = fetchMoreResult.characters
           //newChars.results = [...this.characters.results, ...newChars.results]
@@ -40,6 +42,7 @@ export default defineComponent({
       characters: ref<Character[]>([]),
     }
   },
+  //@ts-ignore
   apollo: {
     characters: {
       query: getQuery(),

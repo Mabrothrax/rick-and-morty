@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+// @ts-ignore
 <template>
   <div>
     <div :class="this.$q.platform.is.iphone ? 'column' : 'row'">
@@ -159,25 +160,24 @@ export default defineComponent({
     
   },
   methods: {
-    logIt(v) {
-      console.log('LOG ', v)
-    },
     favorChar (char: any) {
-    var charIdx = this.data.findIndex((c) => {
+    var charIdx = this.data.findIndex((c: any) => {
        if (c.id === char.id) return c
      })
     
     if (charIdx != null) {
+      //@ts-ignore
       this.data[charIdx].fav = true
       this.favData.push(this.data[charIdx])
     }
     this.forceRerender()
     },
     unFavorChar (char: any) {
-      var charIdx = this.favData.findIndex((c) => {
+      var charIdx = this.favData.findIndex((c: any) => {
         if (c.id === char.id) return c
       })
       if (charIdx != null) {
+        //@ts-ignore
         this.favData[charIdx].fav = false
         this.favData.splice(charIdx, 1)
       }
