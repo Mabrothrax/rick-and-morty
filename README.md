@@ -1,6 +1,6 @@
 # Rick And Morty (rick-and-morty)
 
-Pick Your poison
+Showcasing Quasar Framework with Vue and Apollo for GraphQL, using Rick and Morty public API.
 
 ## Install the dependencies
 ```bash
@@ -11,16 +11,3 @@ npm install
 ```bash
 quasar dev
 ```
-
-### Lint the files
-```bash
-npm run lint
-```
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
